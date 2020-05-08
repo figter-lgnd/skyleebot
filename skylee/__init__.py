@@ -128,25 +128,25 @@ SUDO_USERS.add(OWNER_ID)
 
 # SpamWatch
 
-sw_token = Config.SPAMWATCH_API
-if sw_token == None:
-    spamwtc = None
-    LOGGER.warning("Invalid spamwatch api")
-else:
-    spamwtc = spamwatch.Client(sw_token)
+#sw_token = Config.SPAMWATCH_API
+#if sw_token == None:
+    #spamwtc = None
+    #LOGGER.warning("Invalid spamwatch api")
+#else:
+ #   spamwtc = spamwatch.Client(sw_token)
 
 
-updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
+#updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 
-dispatcher = updater.dispatcher
+#dispatcher = updater.dispatcher
 
-SUDO_USERS = list(SUDO_USERS)
-WHITELIST_USERS = list(WHITELIST_USERS)
-SUPPORT_USERS = list(SUPPORT_USERS)
+#SUDO_USERS = list(SUDO_USERS)
+#WHITELIST_USERS = list(WHITELIST_USERS)
+#SUPPORT_USERS = list(SUPPORT_USERS)
 
 # Load at end to ensure all prev variables have been set
-from skylee.modules.helper_funcs.handlers import CustomCommandHandler
+#from skylee.modules.helper_funcs.handlers import CustomCommandHandler
 
-if CUSTOM_CMD and len(CUSTOM_CMD) >= 1:
-    tg.CommandHandler = CustomCommandHandler
+#if CUSTOM_CMD and len(CUSTOM_CMD) >= 1:
+ #   tg.CommandHandler = CustomCommandHandler
 
